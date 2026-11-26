@@ -1,0 +1,31 @@
+# EXAMPLE ONLY. Copy to order_email.local.yaml (gitignored) and fill in your lab.
+# Never commit real personal addresses, phones, or vendor account IDs to a public repo.
+
+confirm_before_send: true
+# Draft first, then wait for an explicit confirmation from the user
+# ("ok", "确认", "可以发", "send it", etc.) before any vendor email goes out.
+confirm_to: researcher@example.org
+
+vendor:
+  name: Example Vendor
+  primer_email: orders@example-vendor.com
+  modified_primer_email: modified@example-vendor.com
+  seq_email: sequencing@example-vendor.com
+
+customer:
+  name: Jane Researcher
+  group: Example Lab
+  email: researcher@example.org
+  phone: "00000000000"
+  institute: Example University
+  address: 100 Example Street, Example City
+
+defaults:
+  purity: OPC
+  od_per_tube: 2
+  tubes: 1
+  delivery_form: ""    # leave empty unless the user asks otherwise
+  notes: ""            # leave empty unless the user asks otherwise
+
+subject_format: "{date}-{group}-{purpose}"
+# Example: 2026-11-26-Example Lab-EXA1 CDS In-Fusion primer order

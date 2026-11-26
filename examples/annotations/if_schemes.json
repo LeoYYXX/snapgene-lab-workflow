@@ -1,0 +1,33 @@
+{
+  "schemes": {
+    "EVFLAG-EXA1": {
+      "description": "C-terminal FLAG fusion. Reverse primer is -TAA (native stop removed).",
+      "backbone": "../sequences/EV-FLAG.fa",
+      "insert": "../sequences/EXA1_cds_nostop.fa",
+      "f_arm": "TTGGTACCGAATTCCTCGAG",
+      "r_arm": "TTGTAGTCTCCACCACTAGT",
+      "translate_from": "ATG",
+      "expect_motif": "DYKD",
+      "keep_native_stop": false,
+      "linear": false,
+      "f_compensation_nt": 0,
+      "r_compensation_nt": 0,
+      "reverse_primer_suffix": "-TAA"
+    },
+    "EVGUS-proEXA1": {
+      "description": "Transcriptional promoter-reporter fusion. No \u00b1TAA. Reporter starts at its own ATG.",
+      "backbone": "../sequences/EV-GUS.fa",
+      "insert": "../sequences/EXA1_promoter_insert.fa",
+      "f_arm": "AATACGTTGCTAGGAATTC",
+      "r_arm": "AGCTGGATCCAGCCATGG",
+      "translate_from": "ATG",
+      "expect_motif": null,
+      "keep_native_stop": true,
+      "linear": false,
+      "orf_start": 294,
+      "f_compensation_nt": 0,
+      "r_compensation_nt": 0,
+      "reverse_primer_suffix": "none"
+    }
+  }
+}

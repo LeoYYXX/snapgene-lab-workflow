@@ -1,0 +1,11 @@
+Example Vendor — primer synthesis order (FICTIONAL template)
+Researcher,Jane Researcher
+Email,researcher@example.org
+Phone,00000000000
+Institute,Example University
+Group,Example Lab
+Date,2026-11-26
+
+ID,Primer name,Sequence 5'to3',Purity,OD per tube,Tubes,Delivery form,Notes
+1,IF-EVFLAG-EXA1-F,TTGGTACCGAATTCCTCGAGATGAAGCTGGCTATCGGTGCTC,OPC,2,1,,
+2,IF-EVFLAG-EXA1-R-TAA,TTGTAGTCTCCACCACTAGTCAGCTCGATCTTACCGTCGATA,OPC,2,1,,

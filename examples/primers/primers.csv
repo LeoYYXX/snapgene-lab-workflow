@@ -1,0 +1,9 @@
+id,name,sequence,direction,function,target,status,synth_status,vendor_id,legacy_name,notes
+PID-000001,UTR-EXA1-F,TCTCAGGTAACTTAGGCCTTGA,F,UTR,EXA1,draft,unsynthesized,,UTR-EXA1-F,cDNA UTR-anchored clone; core only; FICTIONAL
+PID-000002,UTR-EXA1-R,TGACTTAGGCCAATGGCTTACA,R,UTR,EXA1,draft,unsynthesized,,UTR-EXA1-R,cDNA UTR-anchored clone; core only; FICTIONAL
+PID-000003,IF-EVFLAG-EXA1-F,TTGGTACCGAATTCCTCGAGATGAAGCTGGCTATCGGTGCTC,F,IF,EXA1,to_order,unsynthesized,,IF-EVFLAG-EXA1-F,In-Fusion into EV-FLAG; Tm on core only; FICTIONAL
+PID-000004,IF-EVFLAG-EXA1-R-TAA,TTGTAGTCTCCACCACTAGTCAGCTCGATCTTACCGTCGATA,R,IF,EXA1,to_order,unsynthesized,,IF-EVFLAG-EXA1-R-TAA,C-terminal tag: native stop removed. Suffix -TAA. FICTIONAL
+PID-000005,IF-EVGUS-proEXA1-F,AATACGTTGCTAGGAATTCGTTACCGATCCTAGGTTACATC,F,IF,proEXA1,draft,unsynthesized,,IF-EVGUS-proEXA1-F,Promoter-reporter IF; no ±TAA; FICTIONAL
+PID-000006,IF-EVGUS-proEXA1-R,AGCTGGATCCAGCCATGGTGCAAGGTTCAAGGCCTAAGTT,R,IF,proEXA1,draft,unsynthesized,,IF-EVGUS-proEXA1-R,Core ends before the gene ATG. Transcriptional fusion. FICTIONAL
+PID-000007,Pr0001-UTR-EXA1L-F,AGACCGTTGGCATTCAGGAACT,F,UTR,EXA1L,ordered,ordered,Pr0001,UTR-EXA1L-F,Example of a functional name after the order was actually sent. FICTIONAL
+PID-000008,Pr0002-UTR-EXA1L-R,CTTGTACCTTGGAATCGACTGT,R,UTR,EXA1L,ordered,ordered,Pr0002,UTR-EXA1L-R,Example of a functional name after the order was actually sent. FICTIONAL

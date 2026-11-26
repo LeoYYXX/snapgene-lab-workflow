@@ -1,0 +1,50 @@
+# Starter primer-design parameters. Tune per lab; do not treat as a wet-lab SOP.
+
+tm_min: 57
+tm_max: 63
+tm_target: 60
+tm_diff_max: 3
+gc_min: 40
+gc_max: 60
+min_length: 18
+opt_length: 22
+max_length: 28
+check_dimer: true
+check_hairpin: true
+
+# Tm is computed on the gene-specific core only when an In-Fusion / Gibson overhang is present.
+tm_on: core_only
+optional_overhang:
+  style: in_fusion          # none | in_fusion | gibson
+  length_bp: 15             # In-Fusion typically 15–20
+
+scenes:
+  utr_cdna_clone:
+    description: "PCR on cDNA; product must cover the full longest CDS; F/R prefer UTR, may cross ATG/Stop"
+    template: spliced_cdna_from_genomic_dna
+    success_criterion: amplicon_covers_full_longest_cds
+    utr_cds_buffer_nt: 0
+    allow_cross_atg: true
+    allow_cross_stop: true
+    max_cross_cds_nt: null
+    specificity:
+      primary_db: transcript_cdna
+      secondary_db: genome
+      ncbi_spotcheck: false
+    paralog:
+      prefer_utr_divergence: true
+      require_both_primers_specific: false
+      require_at_least_one_utr_specific: true
+      allow_paralog_amplicons: false
+      annotate_possible_products: true
+
+# SnapGene hides primers that lack these defaults.
+snapgene_primer_display:
+  HybridizationParams:
+    minContinuousMatchLen: "8"
+    allowMismatch: "1"
+    minMeltingTemperature: "40"
+    showAdditionalFivePrimeMatches: "1"
+    minimumFivePrimeAnnealing: "15"
+  binding_site:
+    require_Component_hybridizedRange: true

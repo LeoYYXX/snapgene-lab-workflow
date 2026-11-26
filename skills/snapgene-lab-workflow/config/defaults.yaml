@@ -1,0 +1,15 @@
+# Copy this file into your lab work root as config/defaults.yaml and edit paths.
+# Do not put real personal contacts in a public fork.
+
+work_root: ./examples   # change to your lab root
+mail_policy: draft_then_confirm   # NEVER send vendor email until the user explicitly confirms
+dna_backup_before_write: true
+alignment_writeback: notes_and_report_first
+
+primer_table:
+  backend: local_csv
+  local_mirror: primers/primers.csv
+
+# Optional: a second confirmation inbox used only after you fill it in privately.
+# Leave commented in any public copy.
+# confirm_to: researcher@example.org

@@ -1,0 +1,51 @@
+# Generic naming templates. IDs are assigned once and never reused.
+# Prefix letters are suggestions; a lab may choose its own, but must keep them stable.
+
+gene_work_file: "DNA{seq:03d}_{symbol}_{accession}.dna"
+gene_work_dir: plasmids/genes/
+gene_work_sequence: genomic
+gene_seq_counter_start: 1
+
+# Empty backbones (short display names are also fine, e.g. EV-FLAG).
+empty_vector_file: "EV{seq:02d}-{backbone}-{purpose}-{promoter}-{tag}.dna"
+
+# Construct classes are a template, not a required inventory.
+# The example project uses pOE (CDS fusion) and pPRO (promoter-reporter).
+construct_file: "{class}{seq:03d}_{backbone}_{insert}.dna"
+construct_classes:
+  pOE: {dir: "plasmids/constructs/", next: 2, meaning: "over-expression / protein fusion"}
+  pPRO: {dir: "plasmids/constructs/", next: 2, meaning: "promoter-reporter transcriptional fusion"}
+
+primer_id: "PID-{seq:06d}"
+# Optional: freeze names of internal ids below this number (0 = freeze none).
+primer_frozen_before_id: 0
+primer_vendor_serial: "Pr{seq:04d}"
+# Unsynthesized: {function}-{gene}-{position}
+# After a vendor order is actually sent: {vendor_serial}-{function}-{gene}-{position}
+# Reverse In-Fusion primers that decide the native stop use a +TAA or -TAA suffix.
+
+archive: "plasmids/_archive/{stem}.{timestamp}.dna"
+
+# Genomic feature colors (write the color on the feature and on every segment).
+gene_feature_colors:
+  "5'UTR": "#008000"      # green
+  CDS: "#ff9900"          # orange, including CDS1…CDSn
+  intron: "#808080"       # gray, including intron1…
+  "3'UTR": "#3366ff"      # blue
+  upstream: "#808080"     # gray
+  downstream: "#808080"   # gray
+
+# Gene workfile Notes / Description: HTML with <br/> between fields.
+# Use this gene's own values; never copy another file's symbol or coordinates.
+gene_notes_description_format: html_br
+gene_notes_description_fields:
+  - symbol
+  - accession
+  - organism
+  - function
+  - annotation_versions   # identical | divergent | missing, if two annotations are compared
+  - isoform
+  - region
+  - created
+gene_notes_description_template: |
+  <html><body>symbol: {symbol}<br/>accession: {accession}<br/>organism: {organism}<br/>function: {function}<br/>annotation_versions: {annotation_versions}<br/>isoform: {isoform}<br/>(longest CDS {cds_bp} bp)<br/>region: {region}<br/>created: {created}</body></html>

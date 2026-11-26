@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.DS_Store
+*.egg-info/
+.idea/
+.vscode/
+
+# Local secrets and private lab contacts
+*.local.yaml
+config/order_email.yaml
+secrets*
+.env.*
+
+# Runtime backups (do not commit live-lab archives)
+plasmids/_archive/*.dna
+primers/_bak_primers_*.csv
+orders/placed/*
+!orders/placed/.gitkeep
+seq/inbox/*
+!seq/inbox/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# Keep the example archive folder empty in git
+examples/plasmids/_archive/*.dna
+examples/primers/_bak_primers_*.csv
